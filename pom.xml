@@ -15,6 +15,8 @@
         <module>anothermall-coupon</module>
         <module>anothermall-ware</module>
         <module>anothermall-member</module>
+        <module>anothermall-common</module>
+        <module>anothermall-gateway</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -25,6 +27,11 @@
         <spring-boot.version>2.6.8</spring-boot.version>
         <spring-cloud.version>2021.0.4</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.4.0</spring-cloud-alibaba.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <mysql.version>8.0.23</mysql.version>
+        <junit-jupiter.version>5.8.2</junit-jupiter.version>
+        <lombok.version>1.18.24</lombok.version>
+        <bootstrap.version>3.1.6</bootstrap.version>
     </properties>
 
     <dependencyManagement>
@@ -54,6 +61,40 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!--MyBatis Plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!--MySQL Connector-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!--JUnit5-->
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter</artifactId>
+                <version>${junit-jupiter.version}</version>
+            </dependency>
+
+            <!--Lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-bootstrap</artifactId>
+                <version>${bootstrap.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
